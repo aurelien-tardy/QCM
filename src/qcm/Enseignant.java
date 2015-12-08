@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Enseignant {
     String nom;
     String prenom;
-    ArrayList<QCM> tabQCM;
+    ArrayList<Qcm> tabQCM;
     
     Enseignant(String nom, String prenom){
         this.nom = nom;
