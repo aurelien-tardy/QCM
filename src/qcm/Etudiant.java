@@ -10,5 +10,5 @@ package qcm;
  * @author aurélien
  */
 public class Etudiant {
-    
+    String a;
 }
