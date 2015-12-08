@@ -5,7 +5,6 @@
  */
 package qcm;
 
-import static java.sql.Types.NULL;
 import java.util.ArrayList;
 
 
@@ -16,7 +15,7 @@ import java.util.ArrayList;
 public class Enseignant {
     String nom;
     String prenom;
-    ArrayList<Qcm> tabQCM;
+    ArrayList<QCM> tabQCM;
     
     Enseignant(String nom, String prenom){
         this.nom = nom;
