@@ -21,18 +21,15 @@ public class Enseignant {
     Enseignant(String nom, String prenom){
         this.nom = nom;
         this.prenom = prenom;
-        tabQCM = NULL;
+        tabQCM  = new ArrayList();
     }
     
     void addQCM(QCM q){
-        if(tabQCM == NULL){
-            tabQCM = new ArrayList();
-        }
         tabQCM.add(q);
     }
     
     void delQCM(QCM q){
-        if(tabQCM != NULL)
+        if(tabQCM.isEmpty() == false)
             tabQCM.remove(q);
     }
     
@@ -43,6 +40,6 @@ public class Enseignant {
     }
     
     QCM getQCM(int i){
-        return tabQCM.toArray(i);
+        return tabQCM.get(i);
     }
 }
