@@ -5,10 +5,20 @@
  */
 package qcm;
 
+import java.util.ArrayList;
+
+
 /**
  *
  * @author aurélien
  */
 public class Enseignant {
+    String nom;
+    String prenom;
+    ArrayList<QCM> tabQCM;
     
+    Enseignant(String nom, String prenom){
+        this.nom = nom;
+        this.prenom = prenom;
+    }
 }
