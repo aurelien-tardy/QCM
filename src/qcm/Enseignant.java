@@ -5,6 +5,7 @@
  */
 package qcm;
 
+import static java.sql.Types.NULL;
 import java.util.ArrayList;
 
 
@@ -20,5 +21,28 @@ public class Enseignant {
     Enseignant(String nom, String prenom){
         this.nom = nom;
         this.prenom = prenom;
+        tabQCM = NULL;
+    }
+    
+    void addQCM(QCM q){
+        if(tabQCM == NULL){
+            tabQCM = new ArrayList();
+        }
+        tabQCM.add(q);
+    }
+    
+    void delQCM(QCM q){
+        if(tabQCM != NULL)
+            tabQCM.remove(q);
+    }
+    
+    void modifQCM(QCM q,QCM r){
+        int x = tabQCM.indexOf(q);
+        tabQCM.remove(q);
+        tabQCM.add(x, r);
+    }
+    
+    QCM getQCM(int i){
+        return tabQCM.toArray(i);
     }
 }
