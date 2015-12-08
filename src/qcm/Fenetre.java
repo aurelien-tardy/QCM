@@ -9,6 +9,6 @@ package qcm;
  *
  * @author aurélien
  */
-public class Qcm {
+public class Fenetre {
     
 }
