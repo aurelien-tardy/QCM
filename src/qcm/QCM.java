@@ -26,6 +26,11 @@ public class QCM {
         return this.tag;
     }
     
+    void  createQuestion(String intitule){
+        Question quest = new Question(intitule);
+        addQuestion(quest);
+    }
+    
     void addQuestion(Question q){
         if(tabQuestion.contains(q) == false)
             tabQuestion.add(q);

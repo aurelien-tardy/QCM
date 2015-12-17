@@ -23,6 +23,11 @@ public class Enseignant {
         tabQCM  = new ArrayList();
     }
     
+    void createQCM(String nom, String tag){
+        QCM q = new QCM(nom,tag);
+        addQCM(q);
+    }
+    
     void addQCM(QCM q){
         tabQCM.add(q);
     }
