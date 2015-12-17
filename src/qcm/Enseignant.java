@@ -5,6 +5,11 @@
  */
 package qcm;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 
@@ -13,14 +18,21 @@ import java.util.ArrayList;
  * @author aurélien
  */
 public class Enseignant {
-    String nom;
-    String prenom;
-    ArrayList<QCM> tabQCM;
+    private String nom;
+    private String prenom;
+    private ArrayList<QCM> tabQCM;
+    private Connection c;
     
     Enseignant(String nom, String prenom){
         this.nom = nom;
         this.prenom = prenom;
         tabQCM  = new ArrayList();
+        try{
+            Class.forName("org.sqlite.JDBC").newInstance();
+        }
+        catch(Exception e){
+            
+        } 
     }
     
     void addQCM(QCM q){
@@ -40,5 +52,25 @@ public class Enseignant {
     
     QCM getQCM(int i){
         return tabQCM.get(i);
+    }
+    
+    void afficherNotes(){
+        try{
+            c = DriverManager.getConnection("jdbc:sqlite:qcm.sqlite");
+            String requete = "SELECT Etudiant.nom, Etudiant.prenom, Note.note, Qcm.nom AS nomQCM"
+                    + " FROM Etudiant INNER JOIN Note ON Etudiant.id = Note.idEtudiant"
+                    + " INNER JOIN Qcm ON Note.idQcm = Qcm.id"
+                    + " INNER JOIN Enseignant ON Qcm.idEnseignant = Enseignant.id"
+                    + " WHERE Enseignant.nom LIKE '"+nom+"' AND Enseignant.prenom LIKE '"+prenom+"'";       
+            Statement st = c.createStatement();
+            ResultSet r = st.executeQuery(requete);
+            while(r.next()){
+                System.out.println(r.getObject("nom")+" "+r.getObject("prenom")+" "+r.getObject("note")+" "+r.getObject("nomQCM"));
+            }
+            c.close();
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
