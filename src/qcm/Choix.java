@@ -10,5 +10,14 @@ package qcm;
  * @author aurélien
  */
 public class Choix {
+    String nom;
+    boolean juste;
+    
+    
+    Choix(String nom, boolean juste){
+        this.nom = nom;
+        this.juste = juste;
+    }
+    
     
 }
