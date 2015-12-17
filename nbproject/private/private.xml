@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="IHM"/>
+        <group name="IHM">
+            <file>file:/C:/Users/aurélien/Documents/JAVA/QCM/src/qcm/Main.java</file>
+            <file>file:/C:/Users/aurélien/Documents/JAVA/QCM/src/qcm/Choix.java</file>
+            <file>file:/C:/Users/aurélien/Documents/JAVA/QCM/src/qcm/Fenetre.java</file>
+            <file>file:/C:/Users/aurélien/Documents/JAVA/QCM/src/qcm/Enseignant.java</file>
+            <file>file:/C:/Users/aurélien/Documents/JAVA/QCM/src/qcm/QCM.java</file>
+            <file>file:/C:/Users/aurélien/Documents/JAVA/QCM/src/qcm/Etudiant.java</file>
+            <file>file:/C:/Users/aurélien/Documents/JAVA/QCM/src/qcm/Note.java</file>
+            <file>file:/C:/Users/aurélien/Documents/JAVA/QCM/src/qcm/Images.java</file>
+            <file>file:/C:/Users/aurélien/Documents/JAVA/QCM/src/qcm/Vue_Connexion.java</file>
+            <file>file:/C:/Users/aurélien/Documents/JAVA/QCM/src/qcm/Question.java</file>
+        </group>
     </open-files>
 </project-private>

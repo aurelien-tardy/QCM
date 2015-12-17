@@ -56,13 +56,12 @@ public class Fenetre extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==connexion){
+            this.setVisible(false);
+            this.remove(pan);
             this.setContentPane(new Vue_Connexion());
-            refresh();
+            this.setVisible(true);
+            this.pack();
         }
     }
      
-    void refresh(){
-        this.repaint();
-        this.revalidate();
-    }
 }
