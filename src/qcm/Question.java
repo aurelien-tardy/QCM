@@ -23,18 +23,33 @@ public class Question {
         tabChoix = new ArrayList();
     }
     
+    //Creer un choix possible pour la question
     void createChoix(String nom, boolean juste){
         Choix c = new Choix(nom,juste);
-        addChoix(c);
     }
     
-    
+    //Ajoute le choix a la liste des choix
     void addChoix(Choix c){
         if(tabChoix.contains(c) == false)
             tabChoix.add(c);
     }
     
     
+    // Supprime un choix de la liste
+    boolean delChoix(int i){
+        if(tabChoix.contains(tabChoix.get(i))){
+            tabChoix.remove(i);
+            return true;
+        }
+        return false;
+    }
+    
+    //Remplace une Choix par une nouvelle
+    void modifChoix(Choix q,Choix r){
+        int x = tabChoix.indexOf(q);
+        tabChoix.remove(q);
+        tabChoix.add(x, r);
+    }
     
     
 }

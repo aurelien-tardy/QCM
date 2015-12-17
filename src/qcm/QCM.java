@@ -26,16 +26,18 @@ public class QCM {
         return this.tag;
     }
     
+    //Creer une question 
     void  createQuestion(String intitule){
         Question quest = new Question(intitule);
-        addQuestion(quest);
     }
     
+    //Ajoute une question a la liste des question du QCM
     void addQuestion(Question q){
         if(tabQuestion.contains(q) == false)
             tabQuestion.add(q);
     }
     
+    //Supprime une question du QCM
     boolean delQuestion(int i){
         if(tabQuestion.contains(tabQuestion.get(i))){
             tabQuestion.remove(i);
@@ -44,9 +46,11 @@ public class QCM {
         return false;
     }
     
-    void modifQuestion(Question q, int i){
-        if(this.delQuestion(i))
-            tabQuestion.add(i, q);
+    //Remplace une question par une nouvelle
+    void modifQCM(Question q,Question r){
+        int x = tabQuestion.indexOf(q);
+        tabQuestion.remove(q);
+        tabQuestion.add(x, r);
     }
     
 }
