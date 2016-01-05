@@ -35,7 +35,7 @@ public class Fenetre extends JFrame implements ActionListener{
     JButton connexion;
     JPanel pan;
     
-    Vue_Enseignant vue_enseignant = new Vue_Enseignant();
+    //Vue_Enseignant vue_enseignant = new Vue_Enseignant();
     
     
     

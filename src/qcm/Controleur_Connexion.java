@@ -15,8 +15,11 @@ public class Controleur_Connexion extends AbstractControleur{
 
     @Override
     public boolean control(ArrayList<String> list) {
-
-        return true;
+        if(list.get(2)=="Etudiant"){
+            return true;
+        }else{
+            return false;
+        }
     }
     
 }
