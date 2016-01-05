@@ -1,4 +1,3 @@
-
 package qcm;
 
 import java.util.ArrayList;
@@ -7,6 +6,7 @@ public class QCM {
     private String nom;
     private String tag;
     private ArrayList<Question> tabQuestion;
+    private ArrayList<ArrayList<String>> reponse;  // Réponse du candidat.
     
     QCM(String nom,String tag){
         this.nom = nom;
@@ -25,6 +25,8 @@ public class QCM {
     public ArrayList<Question> getQuestions(){
         return this.tabQuestion;
     }
+    
+    
     
     //Creer une question 
     public void  createQuestion(String intitule){
@@ -51,6 +53,14 @@ public class QCM {
         int x = tabQuestion.indexOf(q);
         tabQuestion.remove(q);
         tabQuestion.add(x, r);
+    }
+    //Récupère la liste de bonnes réponses d'un QCM.
+    public void qcmRep(){
+        
+        for (int i=0; i<this.getQuestions().size();i++){
+             this.reponse.add(this.getQuestions().get(i).repjuste);
+            
+        }
     }
     
 }

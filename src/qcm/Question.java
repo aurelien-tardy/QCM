@@ -1,4 +1,3 @@
-
 package qcm;
 
 import java.util.ArrayList;
@@ -7,6 +6,7 @@ public class Question {
  
     String intitule;
     ArrayList<Choix> tabChoix;
+    ArrayList<String> repjuste; 
 
     public String getIntitule() {
         return intitule;
@@ -48,6 +48,12 @@ public class Question {
         tabChoix.remove(q);
         tabChoix.add(x, r);
     }
-    
+    // Récupère les bonne réponses.
+    void choixJuste(){
+        for(int i=0; i<this.getTabChoix().size();i++){
+            if(this.getTabChoix().get(i).isJuste()==true)
+                repjuste.add(this.getTabChoix().get(i).getNom());
+        }
+    }
     
 }
