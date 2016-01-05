@@ -5,7 +5,7 @@
  */
 package qcm.Vue;
 
-import QCM.Connexion;
+import qcm.Controleur.Connexion;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;

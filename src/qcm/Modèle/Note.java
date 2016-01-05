@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package qcm;
+package qcm.Modèle;
 
 /**
  *
  * @author aurélien
  */
-public class Etudiant {
-    String a;
+public class Note {
+    
+    public void calculNote(){
+        
+    }
 }
