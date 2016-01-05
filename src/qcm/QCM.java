@@ -12,9 +12,9 @@ import java.util.ArrayList;
  * @author aurélien
  */
 public class QCM {
-    String nom;
-    String tag;
-    ArrayList<Question> tabQuestion;
+    private String nom;
+    private String tag;
+    private ArrayList<Question> tabQuestion;
     
     QCM(String nom,String tag){
         this.nom = nom;
@@ -22,23 +22,31 @@ public class QCM {
         tabQuestion = new ArrayList();
     }
     
-    String getTag(){
+    public String getNom(){
+        return this.nom;
+    }
+    
+    public String getTag(){
         return this.tag;
     }
     
+    public ArrayList<Question> getQuestions(){
+        return this.tabQuestion;
+    }
+    
     //Creer une question 
-    void  createQuestion(String intitule){
+    public void  createQuestion(String intitule){
         Question quest = new Question(intitule);
     }
     
     //Ajoute une question a la liste des question du QCM
-    void addQuestion(Question q){
+    public void addQuestion(Question q){
         if(tabQuestion.contains(q) == false)
             tabQuestion.add(q);
     }
     
     //Supprime une question du QCM
-    boolean delQuestion(int i){
+    public boolean delQuestion(int i){
         if(tabQuestion.contains(tabQuestion.get(i))){
             tabQuestion.remove(i);
             return true;
@@ -47,7 +55,7 @@ public class QCM {
     }
     
     //Remplace une question par une nouvelle
-    void modifQCM(Question q,Question r){
+    public void modifQCM(Question q,Question r){
         int x = tabQuestion.indexOf(q);
         tabQuestion.remove(q);
         tabQuestion.add(x, r);

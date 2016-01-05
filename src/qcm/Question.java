@@ -15,8 +15,14 @@ public class Question {
  
     String intitule;
     ArrayList<Choix> tabChoix;
-    
-    
+
+    public String getIntitule() {
+        return intitule;
+    }
+
+    public ArrayList<Choix> getTabChoix() {
+        return tabChoix;
+    }
     
     Question(String intitule){
         this.intitule = intitule;
