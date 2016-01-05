@@ -81,7 +81,7 @@ public class Vue_Connexion extends JPanel {
                 list_form.add(text_mdp.getText());
                 list_form.add(statut.getSelectedItem());
                 if(control.control(list_form)){
-                    maFenetre.changePanel(new Vue_Etudiant(maFenetre));
+                    maFenetre.changePanel(new Vue_Etudiant(maFenetre, text_id.getText()));
                 }
             }
 
