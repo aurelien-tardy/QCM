@@ -13,10 +13,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 
-/**
- *
- * @author aurélien
- */
 public class Enseignant {
     private String nom;
     private String prenom;
