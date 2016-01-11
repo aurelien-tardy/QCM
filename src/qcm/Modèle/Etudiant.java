@@ -10,5 +10,11 @@ package qcm.Modèle;
  * @author aurélien
  */
 public class Etudiant {
-    String a;
+    private String nom;
+    private String prenom;
+    
+    Etudiant(String nom,String prenom){
+        this.nom = nom;
+        this.prenom = prenom;
+    }
 }

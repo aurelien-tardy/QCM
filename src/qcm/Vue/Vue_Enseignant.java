@@ -7,20 +7,10 @@ package qcm.Vue;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.event.ActionEvent;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-import qcm.Controleur.Connexion;
 /**
  *
  * @author p1400336

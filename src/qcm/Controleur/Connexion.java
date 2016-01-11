@@ -53,4 +53,15 @@ public class Connexion {
         return resultat;
 
     }
+    
+    public boolean update(String requet){
+        try{
+            statement.executeUpdate(requet);
+            return true;
+        } catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Erreur dans la requete : " + requet);
+            return false;
+        }
+    }
 }
