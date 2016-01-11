@@ -16,6 +16,7 @@ public class QCM {
     private String tag;
     private ArrayList<Question> tabQuestion;
     private ArrayList<ArrayList<String>> reponse;  // Réponse du candidat.
+    private String filiere;
     
     QCM(String nom,String tag){
         this.nom = nom;
@@ -72,4 +73,7 @@ public class QCM {
         }
     }
     
+    public String getFiliere(){
+        return this.filiere;
+    }
 }
