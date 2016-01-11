@@ -11,7 +11,10 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -83,7 +86,11 @@ public class Vue_Connexion extends JPanel {
                     if(statut.getSelectedItem() == "Etudiant")
                         maFenetre.changePanel(new Vue_Etudiant(maFenetre, text_id.getText()));
                     else
-                        maFenetre.changePanel(new Vue_Enseignant(maFenetre, text_id.getText()));
+                        try {
+                            maFenetre.changePanel(new Vue_Enseignant(maFenetre, list_form));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(Vue_Connexion.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }
 
